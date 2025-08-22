@@ -44,3 +44,14 @@ Switch — route by budget:
 Merge — join both branches.
 
 Gmail — send an internal “New Lead” email with the captured details.
+
+
+🗂️ Google Sheets Schema
+
+Matching column: Email (prevents duplicates when the same email submits again)
+
+Suggested headers in your sheet (row 1):
+
+First Name | Last Name | Email | Budget  | Message | Date | Rejected
+
+The workflow maps form fields directly to these columns and stamps Date with the current day.
