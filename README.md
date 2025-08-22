@@ -72,3 +72,68 @@ Subject: New Lead
 Body: Name, Email, Budget, Message (sent to the configured internal address).
 
 Tip: personalize subjects/bodies and replace the placeholder booking link with your real calendar URL.
+
+
+🛠️ Setup
+
+Import the JSON into n8n: Settings → Workflows → Import from File.
+
+Credentials
+
+Google Sheets OAuth2: connect the Google account that owns your spreadsheet.
+
+Gmail OAuth2: the account that will send emails (and the internal alert).
+
+Google Sheet
+
+Create a sheet with the headers above (exact names recommended).
+
+Paste its Spreadsheet ID into the Google Sheets node (already set in the JSON—replace with your own if needed).
+
+Form trigger
+
+The Form Trigger node defines the fields and handles submissions.
+
+Host it behind your site or share the form endpoint depending on your n8n deployment.
+
+Booking link & recipient
+
+Update the booking URL in the high-budget Gmail node.
+
+Update the internal notification recipient email.
+
+🧪 Test Checklist
+
+Submit a test lead with Budget 0–100 → should be filtered out (no emails sent beyond Sheets write).
+
+Submit 100–1,000 → receive callback-style auto-reply; internal notification arrives.
+
+Submit 1,000+ → receive booking-link auto-reply; internal notification arrives.
+
+Re-submit with the same Email → row should update rather than duplicate.
+
+🔒 Security & Privacy
+
+Do not commit API credentials. Use n8n’s credential store or environment variables.
+
+If handling personal data (emails, messages), comply with GDPR (data retention, export/delete on request).
+
+Consider rate-limiting or CAPTCHA on your public form endpoint.
+
+🧭 Customization Ideas
+
+Add a Slack/Discord notification node for the sales channel.
+
+Replace the “Rejected” heuristic with a scoring node (e.g., budget + message keywords).
+
+Push qualified leads to a CRM (HubSpot, Pipedrive, etc.).
+
+Localize autoresponders by form language.
+
+🐳 Deployment
+
+Self-host n8n via Docker or use n8n Cloud.
+
+Ensure public reachability for the form webhook (reverse proxy or n8n Tunnel).
+
+Back up your workflow JSON and sheet regularly.
