@@ -55,3 +55,20 @@ Suggested headers in your sheet (row 1):
 First Name | Last Name | Email | Budget  | Message | Date | Rejected
 
 The workflow maps form fields directly to these columns and stamps Date with the current day.
+
+
+📬 Email Templates (Gmail)
+
+Budget 100–1,000
+Subject: Hey, thanks for inquiring with ABC company
+Body: Acknowledge inquiry → say you’ll call later this week.
+
+Budget 1,000+
+Subject: Hey, thanks for inquiring with ABC company
+Body: Acknowledge → ask them to book a call at your calendar link.
+
+Internal notification
+Subject: New Lead
+Body: Name, Email, Budget, Message (sent to the configured internal address).
+
+Tip: personalize subjects/bodies and replace the placeholder booking link with your real calendar URL.
