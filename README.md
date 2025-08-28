@@ -94,7 +94,7 @@ Form trigger
 
 The Form Trigger node defines the fields and handles submissions.
 
-Host it behind your site or share the form endpoint depending on your n8n deployment.
+Host it behind your site or share the form endpoint, depending on your n8n deployment.
 
 Booking link & recipient
 
