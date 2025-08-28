@@ -54,7 +54,7 @@ Suggested headers in your sheet (row 1):
 
 First Name | Last Name | Email | Budget  | Message | Date | Rejected
 
-The workflow maps form fields directly to these columns and stamps Date with the current day.
+The workflow maps form fields directly to these columns and stamps the Date with the current day.
 
 
 📬 Email Templates (Gmail)
