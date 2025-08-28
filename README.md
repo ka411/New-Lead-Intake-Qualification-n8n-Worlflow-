@@ -18,7 +18,7 @@ Auto-responses via Gmail
 
 Mid-tier budgets: “We’ll call you this week.”
 
-High budgets: “Please book a call at this lin.k”
+High budgets: “Please book a call at this link.”
 
 Internal alert to the team with full lead details
 
